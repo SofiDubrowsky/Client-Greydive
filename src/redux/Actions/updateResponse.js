@@ -5,7 +5,8 @@ export const UPDATE_RES = "UPDATE_RES";
 export const updateResponse = (id, formValues) => {
     return async (dispatch) => {
     
-        const info = await axios.put(`http://localhost:3001/response/${id}`, formValues);
+        // const info = await axios.put(`http://localhost:3001/response/${id}`, formValues);
+        const info = await axios.put(`https://server-greydive-production.up.railway.app/response/${id}`, formValues);
         console.log(formValues);
         console.log(id);
         return dispatch({ type: UPDATE_RES, payload: info.data });

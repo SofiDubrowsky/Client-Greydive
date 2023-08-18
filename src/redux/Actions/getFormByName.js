@@ -7,7 +7,9 @@ export default function getFormByName(name) {
     return async function (dispatch) {
         try {
             let result = await axios.get(
-                  `http://localhost:3001/forms?name=${name}`
+                //   `http://localhost:3001/forms?name=${name}`
+                `https://server-greydive-production.up.railway.app/forms?name=${name}`
+                  
             );
 
             if (result.data.length === 0) {
@@ -17,7 +19,6 @@ export default function getFormByName(name) {
                     text: 'No se encontraron resultados para el formulario consultado ',
                     showConfirmButton: false, 
                     timer: 3000, 
-                    background: '#FFFFFF',
                     timerProgressBar: true,
                     backdrop: true,
                     showClass: {
