@@ -21,7 +21,7 @@ export default function NavBar() {
  
     return (
     <div className={style.navbar}>
-        <img src={image} alt="" height={"30px"} />
+        <img src={image} alt="" />
         <h3> GREYDIVE</h3>
        <button className={style.button1} type='submit' onClick={(event) => handleHome(event)}>Mi Perfil</button> 
        <button className={style.button2} type='submit' onClick={(event) => handleLogout(event)}>Cerrar Sesión</button>  

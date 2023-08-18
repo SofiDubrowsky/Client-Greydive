@@ -20,8 +20,13 @@
     text-transform: uppercase;
     border:none
 }
+
 img{
     margin:1vh
+}
+
+.navbar img{
+    height: 4vh;
 }
 
 .navbar{
