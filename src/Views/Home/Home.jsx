@@ -75,7 +75,17 @@ const Home = () => {
                           }).then((result) => {
                             if (result.isConfirmed) {
                               dispatch(deleteRes(res.id))
-                               reload()
+                              Swal.fire({
+                                text: 'Respuesta Eliminada!',
+                                icon: 'success',
+                                showConfirmButton: false,
+                                timer: 3000
+                            }).then(
+                                setTimeout(() => {
+                                    reload()
+                                }, 3000)
+                                )
+                             
                             } else {
                               navigate('/home');
                             }
