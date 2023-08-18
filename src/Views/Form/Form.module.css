@@ -1,0 +1,212 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+  }
+  
+  .form {
+    position: relative;
+    width: 50vw;
+    height: auto;
+    background-color: white ;
+    border: solid 1px #adadad ;
+    font-size: 0;
+    color: black;
+    border-radius: 3vh;
+    margin-bottom: 5vh;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1vh;
+    padding:0;
+    box-shadow: 3px 4px 9px 0px rgba(0,0,0,0.75);
+  }
+  
+  .form h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color:black;
+    text-align: center;
+    margin-bottom: 5vh;
+    font-size: 5vh;
+    text-decoration: underline rgb(131, 34, 196);
+  
+  }
+
+  .container h4 {
+    font-weight: bold;
+    text-shadow: 2px 2px var(--main-color), 2px 2px rgba(242, 242, 242, 0.361);
+    color: rgb(131, 34, 196);
+    text-align: start;
+    font-size: 2vh;
+    margin-top: 5vh;
+    margin-bottom: 0;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    color:black;
+  }
+  
+  
+  .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:black;
+    
+  }
+  
+  .btn {
+    border: none;
+    box-shadow: 4px 4px var(--main-color);
+    width: 8vw;
+    height: 6vh;
+    color: white;
+    border-radius: 2vh;
+    transition: 0.5s;
+    cursor: pointer;
+    transform: translate(0%);
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgb(131, 34, 196);
+    font-size: 2vh;
+    margin-bottom: 5vh;
+  }
+  
+  .btn:hover {
+    transform: translate(0%) scale(1.1);
+    border:none;
+  }
+  
+  .text {
+    gap: 1vh;
+  }
+  
+  .text input {
+    width: 20vw;
+    height: 5vh;
+    border-radius: 1vh;
+    border: 1px solid #adadad;
+    background-color: white;
+    box-shadow: 4px 4px var(--main-color);
+    color: black;
+    padding: 1vh 2vh;
+    outline: none;
+    margin-bottom: 1vh;
+    margin-top: 0;
+    text-align: center;
+    font-size: 2.5vh;
+    font-weight: bold;
+  
+  }
+
+  .text select {
+    width: 21.7vw;
+    height: 7.7vh;
+    border-radius: 1vh;
+    border: 1px solid #adadad;
+    background-color: white;
+    box-shadow: 4px 4px var(--main-color);
+    color: black;
+    padding: 1vh 2vh;
+    outline: none;
+    margin-bottom: 1vh;
+    text-align: center;
+    font-size: 2.5vh;
+    font-weight: bold;
+
+  }
+
+  .text select option{
+    color: black
+  }
+
+  .text select:focus,
+select:focus {
+  outline: none;
+  border: solid 2px;
+  border-color: rgb(131, 34, 196);
+}
+  
+  .text input:focus {
+    outline: none;
+    border: solid 2px;
+    border-color: rgb(131, 34, 196);
+  }
+  
+  .text input::placeholder {
+    color: rgba(0, 0, 0, 0.438);
+    text-align: center;
+    font-size: 2.5vh;
+
+  }
+  
+  .error {
+    color:  rgb(131, 34, 196);
+    font-size: 2vh;
+  }
+
+  .noerror {
+    color: rgba(255, 255, 255, 0);
+    font-size: 2vh;
+  }
+  
+  .form p{
+    margin-bottom: 0;
+    font-weight: bold;
+    text-shadow: 0px 0px var(--main-color), 0px 0px rgba(0, 0, 0, 0.361);
+    text-transform: uppercase;
+    color:black;
+    text-align: center;
+    margin-bottom: 0.5vh;
+    font-size: 2vh;
+
+  }
+  
+
+  .checkboxContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 2vh;
+  }
+  
+  .checkboxLabel {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2vh;
+    margin-left: 1vw;
+  }
+
+  .checkboxLabel::last-leter{
+    color: red
+  }
+  
+  .checkboxContainer input{
+    width: 2vw;
+    margin-right: 0;
+    margin: 0;
+    background-color: white;
+  }
+  
+  .checkboxContainer input:checked::after{
+    width: 2vw;
+    margin-right: 0;
+    margin: 0;
+    color: rgb(131, 34, 196);
+  }
+
+ 
+
