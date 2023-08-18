@@ -2,7 +2,7 @@
 
 ## **📌 INFORMACIÓN DEL PROYECTO**
 
-Bienvenido al README del proyecto **GREYDIVE**, un emocionante desafío técnico que te llevará a través de la creación de una aplicación de encuestas basada en archivos JSON. En este documento, encontrarás todos los detalles clave para comprender y utilizar esta aplicación.
+Bienvenido al README del proyecto **GREYDIVE**, un desafío técnico que consiste en el desarrollo de una aplicación de encuestas basada en archivos JSON. En este documento, encontrarás todos los detalles clave para comprender y utilizar esta aplicación.
 
 ### **Objetivo**
 
@@ -10,9 +10,7 @@ El objetivo central de este proyecto es desarrollar una aplicación que pueda pr
 
 ### **Tecnologías Utilizadas**
 
-Para llevar a cabo este desafío, hemos empleado una combinación de tecnologías líderes en la industria:
-
-- **React**: Como la columna vertebral de la interfaz de usuario.
+- **React**: Para el desarrollo de la interfaz de usuario.
 - **Vite**: Para una construcción rápida y eficiente.
 - **Redux**: Para el manejo centralizado del estado de la aplicación.
 - **Node** y **Express**: Para el desarrollo del backend.
@@ -21,21 +19,21 @@ Para llevar a cabo este desafío, hemos empleado una combinación de tecnología
 
 ### **Funcionalidades Destacadas**
 
-Nuestra aplicación, **GREYDIVE**, ofrece una serie de características imprescindibles:
+La aplicación, **GREYDIVE**, ofrece una serie de características imprescindibles:
 
 - **Gestión de Cuentas**: Los usuarios pueden crear cuentas e iniciar sesión de manera segura.
-- **Completar Formularios**: Permite a los usuarios completar formularios generados a partir de los ítems del archivo JSON.
+- **Completar Formularios**: Permite a los usuarios completar formularios generados a partir de los ítems de un archivo JSON.
 - **Guardar y Editar Respuestas**: Las respuestas a los formularios se guardan y pueden ser editadas posteriormente.
-- **Manejo de Errores**: Hemos implementado un robusto sistema de manejo de errores para una experiencia fluida.
-- **Estilo Personalizado**: Utilizamos CSS puro para lograr un diseño atractivo y fácil de usar.
+- **Manejo de Errores**: Se ha implementado un sistema de manejo de errores para evitar datos erroneos.
+- **Estilo Personalizado**: Se utilizo CSS puro para lograr un diseño simple y fácil de usar.
 
-### **Implementación y Despliegue**
+### **Desarrollo y Deploy**
 
-El proyecto ha sido implementado en un tiempo récord de 48 horas. Para el despliegue, aprovechamos las plataformas de alojamiento Railway (base de datos y backend) y Render (frontend), garantizando así un funcionamiento confiable.
+El proyecto ha sido desarrollado en un tiempo de 48 horas. Para el deploy, se utilizaron las plataformas de alojamiento Railway (base de datos y backend) y Render (frontend).
 
 ## **⚠️ GUÍA DE USO**
 
-A continuación, te presentamos una guía paso a paso para utilizar la aplicación **GREYDIVE**:
+A continuación, una guía paso a paso para utilizar la aplicación **GREYDIVE**:
 
 ### **1. Crear Cuenta y Iniciar Sesión**
 
@@ -54,23 +52,24 @@ A continuación, te presentamos una guía paso a paso para utilizar la aplicaci�
 
 - Los formularios no se guardarán automáticamente mientras los completas. Debes enviarlos para que se registren.
 - Una vez enviados, volverás al dashboard y verás que el formulario se ha añadido a tus respuestas.
-- Asegúrate de corregir cualquier error antes de enviar el formulario.
+- No se te permitira enviar formularios que contengan datos erroneos. 
 
 ### **4. Editar/Eliminar Formularios**
 
-- En la lista de formularios completados, encontrarás botones para editar y eliminar.
+- En la lista de formularios completados, encontrarás botones para "ver respuestas" y eliminar.
 - Antes de eliminar un formulario, se te pedirá confirmación para evitar eliminaciones accidentales.
-- Al editar, se te redirigirá a una vista donde podrás modificar tus respuestas.
-- Tanto al editar como al completar por primera vez, hay un botón en la barra de navegación para regresar al perfil.
+- Al hacer click en "ver respuestas", se te redirigirá a una vista donde podrás ver y modificar tus respuestas.
+- Tanto al editar como al completar por primera vez un formulario, podrás ver un botón en la barra de navegación para regresar al perfil.
 
 ### **5. Cerrar Sesión**
 
 - Desde la barra de navegación, puedes cerrar sesión en cualquier momento.
-- Ten en cuenta que la barra de navegación solo aparecerá cuando estés logueado en una página distinta de la landing page.
-- Sin inicio de sesión, no podrás acceder a las otras URLs.
+- Ten en cuenta que la barra de navegación solo aparecerá cuando estés logueado.
+- Sin inicio de sesión, no podrás acceder a la aplicación.
 
 ## **🚀 ¡Es hora de sumergirse en GREYDIVE!**
 
-Esta guía proporciona una visión completa de cómo utilizar nuestra aplicación de encuestas. ¡Esperamos que disfrutes explorando y aprovechando al máximo las características que hemos desarrollado con tanto esfuerzo!
+Esta guía proporciona una visión completa de cómo utilizar esta aplicación de encuestas. 
 
-**¡Gracias por ser parte de GREYDIVE!**
+**¡Te invito a probar la aplicación!**
+-Deploy: [Greydive](https://greydive-otxe.onrender.com/)
