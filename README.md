@@ -72,4 +72,4 @@ A continuación, una guía paso a paso para utilizar la aplicación **GREYDIVE**
 Esta guía proporciona una visión completa de cómo utilizar esta aplicación de encuestas. 
 
 **¡Te invito a probar la aplicación!**
--Deploy: [Greydive](https://greydive-otxe.onrender.com/)
+- Deploy: [Greydive](https://greydive-otxe.onrender.com/)
