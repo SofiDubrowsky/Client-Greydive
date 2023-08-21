@@ -36,6 +36,40 @@ const Home = () => {
         dispatch(getUserById(myId))
     }, [dispatch]);
 
+    const handleSubmit = (event, id) => {
+        event.preventDefault();
+        localStorage.setItem("response", id);
+        navigate(`/update/${id}`);
+     };
+
+     const handleDelete = (event,id)=>{
+        event.preventDefault();
+        Swal.fire({
+            text: '¿Estas seguro de eliminar?',
+            icon: 'warning',
+            showConfirmButton: true,
+            showCancelButton: true,
+            confirmButtonText: 'Eliminar',
+            cancelButtonText: 'Volver al Inicio',
+          }).then((result) => {
+            if (result.isConfirmed) {
+              dispatch(deleteRes(id))
+              Swal.fire({
+                text: 'Respuesta Eliminada!',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 3000
+            }).then(
+                setTimeout(() => {
+                    reload()
+                }, 3000)
+                )
+             
+            } else {
+              navigate('/home');
+            }
+          })
+    }
 
     return (
         <div className={styles.home}>
@@ -57,44 +91,12 @@ const Home = () => {
             <div className={styles.responses}>
                 <h2  style={{fontSize:"3.5vh",textDecoration: "underline rgb(131, 34, 196)" }} >MIS FORMULARIOS</h2>
                 {(userResponses?.length > 0) ? userResponses?.map((res) => {
-                    const form = allForms.find(e => e.id === res.FormId)
-                    const handleSubmit = (event) => {
-                        event.preventDefault();
-                        localStorage.setItem("response", res.id);
-                        navigate(`/update/${res.id}`);
-                     };
-                    const handleDelete = (event)=>{
-                        event.preventDefault();
-                        Swal.fire({
-                            text: '¿Estas seguro de eliminar?',
-                            icon: 'warning',
-                            showConfirmButton: true,
-                            showCancelButton: true,
-                            confirmButtonText: 'Eliminar',
-                            cancelButtonText: 'Volver al Inicio',
-                          }).then((result) => {
-                            if (result.isConfirmed) {
-                              dispatch(deleteRes(res.id))
-                              Swal.fire({
-                                text: 'Respuesta Eliminada!',
-                                icon: 'success',
-                                showConfirmButton: false,
-                                timer: 3000
-                            }).then(
-                                setTimeout(() => {
-                                    reload()
-                                }, 3000)
-                                )
-                             
-                            } else {
-                              navigate('/home');
-                            }
-                          })
-                    }
+                    const form = allForms?.find(form => form.id === res.FormId)
+                    
                     return (<div className={styles.res}>
                         <h2  style={{fontSize:"3vh" }}>{form?.title}</h2>
-                        <button className={styles.delete} type='submit' onClick={(event) => handleDelete(event)}>Eliminar</button> 
-                        <button className={styles.button} type='submit' onClick={(event) => handleSubmit(event)}>Ver Respuestas</button>  
+                        <button className={styles.delete} type='submit' onClick={(event) => handleDelete(event,res.id)}>Eliminar</button> 
+                        <button className={styles.button} type='submit' onClick={(event) => handleSubmit(event,res.id)}>Ver Respuestas</button>  
                     </div>)
                 }
                 ) : "No hay formularios por el momento"}
