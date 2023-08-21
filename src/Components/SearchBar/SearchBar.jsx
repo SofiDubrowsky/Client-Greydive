@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getFormById} from "../../redux/Actions/getFormById";
 import style from "./SearchBar.module.css"
 import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 
 export default function SearchBar() {
@@ -34,8 +35,26 @@ export default function SearchBar() {
          localStorage.setItem("form", codenum);
          navigate(`/form/${codenum}`);
       }
-      if(match)alert("Ya has realizado este formulario") ;
-      if(!exists)alert("Codigo no valido!");
+      if(match){
+         Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Ya has realizado este formulario",
+            showConfirmButton: false,
+            timer: 2000,
+           
+        });
+      } ;
+      if(!exists){
+         Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Codigo no valido!",
+            showConfirmButton: false,
+            timer: 2000,
+           
+        });
+      };
    };
 
    return (
