@@ -42,34 +42,48 @@ const Home = () => {
         navigate(`/update/${id}`);
      };
 
-     const handleDelete = (event,id)=>{
+     const handleDelete = (event, id) => {
         event.preventDefault();
         Swal.fire({
-            text: '¿Estas seguro de eliminar?',
-            icon: 'warning',
-            showConfirmButton: true,
-            showCancelButton: true,
-            confirmButtonText: 'Eliminar',
-            cancelButtonText: 'Volver al Inicio',
-          }).then((result) => {
-            if (result.isConfirmed) {
-              dispatch(deleteRes(id))
-              Swal.fire({
-                text: 'Respuesta Eliminada!',
-                icon: 'success',
-                showConfirmButton: false,
-                timer: 3000
-            }).then(
+          icon: 'warning',
+          title: 'Eliminar Respuesta',
+          text: "¿Esta seguro de eliminar esta respuesta?",
+          showConfirmButton: true,
+          showCancelButton: true, 
+          confirmButtonText: 'Eliminar',
+          cancelButtonText: 'Volver', 
+          allowOutsideClick: () => !Swal.isLoading(), 
+          preConfirm: async () => {
+            try {
+              await dispatch(deleteRes(id));
+              await dispatch(getResponses());
+              return new Promise((resolve) => {
                 setTimeout(() => {
-                    reload()
-                }, 3000)
-                )
-             
-            } else {
-              navigate('/home');
+                  resolve();
+                }, 1000).then(
+                  setTimeout(() => {
+                    Swal.fire({
+                      icon: 'success',
+                      title: 'Respuesta eliminada con éxito',
+                      text: 'La respuesta ha sido eliminada correctamente.',
+                      showConfirmButton: false,
+                      timer: 2000,
+                    })
+                  }, 1000)
+                  )
+              });
+            } catch (error) {
+              console.error(error);
+              return Promise.reject();
             }
-          })
-    }
+          },
+        });
+        if (result.isConfirmed) {
+          Swal.close();
+        } else {
+          navigate("/home");
+        }
+      };
 
     return (
         <div className={styles.home}>
