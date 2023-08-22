@@ -100,7 +100,7 @@ const Home = () => {
                 <div className={styles.barContainer}>
                     <SearchBar />
                 </div>
-                <p style={{ color: "rgb(243, 91, 129)", fontSize: "1.7vh", paddingLeft:"5vw",paddingRight:"5vw" }}>*Recuerda que no podras agregar a tu cuenta un formulario que ya completaste!</p>
+                <p style={{ color: "rgb(131, 34, 196)", fontSize: "1.7vh", paddingLeft:"5vw",paddingRight:"5vw" }}>*Recuerda que no podras agregar a tu cuenta un formulario que ya completaste!</p>
             </div>
             <div className={styles.responses}>
                 <h2  style={{fontSize:"4vh" }} >MIS FORMULARIOS</h2>
