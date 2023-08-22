@@ -94,7 +94,7 @@ const Update = () => {
                 case 'date':
                     return (
                         <div>
-                            <p className={styles.content}>{field.label}{field.required && ' *'}</p>
+                            <p className={styles.contentt}>{field.label}{field.required && <span style={{ color: 'rgb(243, 91, 129)', marginLeft:'0.2vw'}}> *</span>}</p>
 
                             <div className={styles.content}>
                                 <input
@@ -114,7 +114,7 @@ const Update = () => {
                 case 'select':
                     return (
                         <div>
-                            <p className={styles.content}>{field.label}{field.required && ' *'} </p>
+                            <p className={styles.contentt}>{field.label}{field.required && <span style={{ color: 'rgb(243, 91, 129)', marginLeft:'0.2vw'}}> *</span>} </p>
 
                             <div className={styles.content}>
                                 <select
@@ -152,7 +152,7 @@ const Update = () => {
                                     required={field.required}
                                 />
                                 <span className={styles.checkboxLabel}>
-                                    {field.label}{field.required && ' *'}
+                                    {field.label}{field.required && <span style={{ color: 'rgb(243, 91, 129)', marginLeft:'0.2vw'}}>*</span>}
                                 </span>
                             </label>
 

@@ -1,25 +1,28 @@
 .button1{
-    background-color: white;
-    height: 4vh;
+    background-color: rgba(255, 255, 255, 0); 
     margin-left: auto;
-    width: 8vw;
-    color: black;
+    color: white;
     font-size: 2vh;
-    border-radius: 1vh;
     text-transform: uppercase;
     border: none;
 }
+
+.button1:focus {
+    outline: none;
+  }
+
 .button2{
-    background-color: white;
-    height: 4vh;
-    margin-left: 1vw;
-    width: 10vw;
-    color: black;
+    background-color: rgba(255, 255, 255, 0); 
+    margin-left: 1.5vw;
+    color: white;
     font-size: 2vh;
-    border-radius: 1vh;
     text-transform: uppercase;
-    border:none
+    border: none;
 }
+
+.button2:focus {
+    outline: none;
+  }
 
 img{
     margin:1vh

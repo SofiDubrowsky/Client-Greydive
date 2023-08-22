@@ -34,4 +34,11 @@
     text-transform: uppercase;
     font-weight: bold;
     box-shadow: 4px 4px var(--main-color);
+    transition: 0.5s;
 }
+
+.button:hover {
+   
+    background-color: rgb(103, 15, 161);
+    border:none;
+  }

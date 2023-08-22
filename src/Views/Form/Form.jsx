@@ -24,7 +24,6 @@ const Form = () => {
         dispatch(getFormById(id));
     }, [dispatch]);
 
-    console.log(selectedForm);
 
     const [formValues, setFormValues] = useState({});
     const [formErrors, setFormErrors] = useState({});
@@ -75,7 +74,7 @@ const Form = () => {
                 case 'date':
                     return (
                         <div>
-                            <p className={styles.content}>{field.label}{field.required && ' *'}</p>
+                            <p className={styles.contentt}>{field.label}{field.required && <span style={{ color: 'rgb(243, 91, 129)', marginLeft:'0.2vw'}}> *</span>}</p>
                             <div className={styles.content}>
                                 <input
                                     key={index}
@@ -94,7 +93,7 @@ const Form = () => {
                 case 'select':
                     return (
                         <div>
-                            <p className={styles.content}>{field.label}{field.required && ' *'} </p>
+                            <p className={styles.contentt}>{field.label}{field.required && <span style={{ color: 'rgb(243, 91, 129)', marginLeft:'0.2vw'}}> *</span>} </p>
 
                             <div className={styles.content}>
                                 <select
@@ -132,7 +131,7 @@ const Form = () => {
                                     required={field.required}
                                 />
                                 <span className={styles.checkboxLabel}>
-                                    {field.label}{field.required && ' *'}
+                                    {field.label}{field.required && <span style={{ color: 'rgb(243, 91, 129)', marginLeft:'0.2vw'}}>*</span>}
                                 </span>
                             </label>
 

@@ -88,22 +88,22 @@ const Home = () => {
     return (
         <div className={styles.home}>
             <div className={styles.data}>
-                    <h3 style={{fontSize:"5vh", paddingLeft:"3vw",paddingRight:"3vw" }}>BIENVENIDO A TU CUENTA GREYDIVE</h3>
+                    <h3 style={{fontSize:"5.5vh", paddingLeft:"3vw",paddingRight:"3vw", marginTop:"7vh" }}>BIENVENIDO A TU CUENTA GREYDIVE</h3>
                 <div className={styles.userData}>
                     <h1 style={{fontSize:"2.5vh",textTransform:"uppercase", textDecoration: "underline rgb(131, 34, 196)"  }}>Datos de cuenta</h1>
                     <h4 style={{fontSize:"2vh"}}>Nombre: {userInfo.name}</h4>
                     <h4 style={{fontSize:"2vh" }}>Email: {userInfo.email}</h4>
                     <h4 style={{fontSize:"2vh" }}>Formularios completados: {userResponses?.length}</h4>
                 </div>
-                <h4 style={{fontSize:"4vh",marginTop:"7vh",marginBottom:"2vh" ,textDecoration: "underline rgb(131, 34, 196)" }}> AGREGAR FORMULARIO </h4>
+                <h4 style={{fontSize:"4vh",marginTop:"7vh",marginBottom:"2vh" }}> AGREGAR FORMULARIO </h4>
                 <h4 style={{fontSize:"2vh",marginTop:"0vh" }}>Introduce aquí el código del formulario a completar</h4>
                 <div className={styles.barContainer}>
                     <SearchBar />
                 </div>
-                <p style={{ color: "rgb(131, 34, 196)", fontSize: "1.7vh", paddingLeft:"5vw",paddingRight:"5vw" }}>*Recuerda que no podras agregar a tu cuenta un formulario que ya completaste!</p>
+                <p style={{ color: "rgb(243, 91, 129)", fontSize: "1.7vh", paddingLeft:"5vw",paddingRight:"5vw" }}>*Recuerda que no podras agregar a tu cuenta un formulario que ya completaste!</p>
             </div>
             <div className={styles.responses}>
-                <h2  style={{fontSize:"3.5vh",textDecoration: "underline rgb(131, 34, 196)" }} >MIS FORMULARIOS</h2>
+                <h2  style={{fontSize:"4vh" }} >MIS FORMULARIOS</h2>
                 {(userResponses?.length > 0) ? userResponses?.map((res) => {
                     const form = allForms?.find(form => form.id === res.FormId)
                     
