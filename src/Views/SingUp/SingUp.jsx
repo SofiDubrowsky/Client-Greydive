@@ -106,8 +106,9 @@ const SingUp = () => {
         <div className={style.container}>
             <div className={style.column}>
                 <img src={image} alt="" />
-                <h1 style={{ fontSize: "6vh", color: "rgb(131, 34, 196)" }}>BIENVENIDO A GREYDIVE</h1>
-                <p style={{ fontSize: "2vh", marginRight: "11vw", marginLeft: "11vw", fontWeight: "bold" }}>Greydive es una plataforma para completar formularios y almacenar respuestas, para acceder inicia sesión o registrate</p>
+                <h1 style={{ fontSize: "6vh", color: "white" }}>BIENVENIDO A GREYDIVE</h1>
+                <p style={{ fontSize: "2vh", marginRight: "11vw", marginLeft: "11vw", fontWeight: "bold", color: "white" }}>Greydive es una plataforma para completar formularios y almacenar respuestas. </p>
+                <p style={{ fontSize: "2vh", marginRight: "11vw", marginLeft: "11vw", fontWeight: "bold", color: "white" }}>Para acceder inicia sesión o registrate.</p>
             </div>
             <div className={style.col}>
                 <form className={style.form} onSubmit={handleSubmit}>

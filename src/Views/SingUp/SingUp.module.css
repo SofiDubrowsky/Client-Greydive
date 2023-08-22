@@ -18,7 +18,7 @@ body {
   align-items: center;
   height: 100vh;
   border-right: solid 1px rgb(131, 34, 196);
-  background-color:rgba(131, 34, 196, 0.075);
+  background-color:rgb(131, 34, 196);
 }
 .col{
   display: flex;
