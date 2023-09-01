@@ -172,7 +172,7 @@ const Form = () => {
             }
             dispatch(postResponses(response))
             Swal.fire({
-                text: 'Respuesta Eviada!',
+                text: 'Respuesta Enviada!',
                 icon: 'success',
                 showConfirmButton: false,
                 timer: 3000
